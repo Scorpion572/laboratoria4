@@ -5,6 +5,12 @@ int zwracaniewiekszej(int a, int b);
 void dzielniki(int n);
 int potegowanie(int a, int b);
 int silnia(int n);
+float dodawanie(float a, float b);
+float odejmowanie(float a, float b);
+float mnozenie(float a, float b);
+float dzielenie(float a, float b);
+int dzielenieparzystej(int n);
+int dzielenienieparzystej(int n);
 int main()
 {
 	/*int a, b;												//zadanie 1
@@ -17,6 +23,32 @@ int main()
 	cin >> n;
 	dzielniki(n);*/
 
+	/*float a, b;                                                 //zad 3
+	int wybor;
+	while (1) {
+		cout << "Podaj dwie liczby : ";
+		cin >> a >> b;
+		cout << "Wybierz rodzaj dzialania :\n ";
+		cout << "1. Dodawanie\n 2. Odejmowanie\n 3. Mnozenie\n 4. Dzielenie\n 5. Zakoncz dzialanie\n ";
+		cin >> wybor;
+		switch (wybor) {
+		case 1:
+			cout << "wynik dodawania to : " <<dodawanie(a,b) << endl;
+			break;
+		case 2:
+			cout << "wynik odejmowania to : " << odejmowanie(a,b) << endl;
+			break;
+		case 3:
+			cout << "wynik mnozenia to : " << mnozenie(a,b) << endl;
+			break;
+		case 4:
+				cout << "wynik dzielenia to : " <<dzielenie(a,b) << endl;
+				break;
+		case 5:
+			return 0;
+		}
+	}*/
+
 	/*int a, b;											//zadanie 4
 	cout << "pdaj podstawe i wykladnik potegi: " << endl;
 	cin >> a >> b;
@@ -27,6 +59,21 @@ int main()
 	cin >> n;
 	cout << "silnia z tej liczby to: " << silnia(n) << endl;*/
 
+	int n;
+	cout
+
+
+/*	int n = 0;
+	while (n < 100) {
+		if (n % 2 == 0) {
+			cout << dzielenieparzystej(n) << endl;
+			n++;
+		}
+		else {
+			cout << dzielenienieparzystej(n) << endl;
+			n++;
+		}
+	}*/
 }
 void wyswietlanie(int a, int b) {
 	if (a > b) {
@@ -76,4 +123,29 @@ int silnia(int n) {
 	wynik=wynik*i;
  }
  return wynik;
+}
+
+float dodawanie(float a, float b) {
+	return a + b;
+}
+float odejmowanie(float a, float b) {
+	return a - b;
+}
+float mnozenie(float a, float b) {
+	return a * b;
+}
+float dzielenie(float a, float b) {
+	if (b == 0) {
+		cout << "nie dzielimy przez zero! " << endl;
+	}
+	else {
+		return a / b;
+	}
+}
+
+int dzielenieparzystej(int n) {
+	return n / 2;
+}
+int dzielenienieparzystej(int n) {
+	return (n - 1) / 2;
 }
