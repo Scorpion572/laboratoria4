@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 void wyswietlanie(int a, int b);
 int zwracaniewiekszej(int a, int b);
@@ -12,6 +13,9 @@ float dzielenie(float a, float b);
 int dzielenieparzystej(int n);
 int dzielenienieparzystej(int n);
 int potegowaniedwojki(int n);
+float potegowaniedoentej(float n);
+int losowananie(int n);
+int procent(int n);
 int main()
 {
 	/*int a, b;												//zadanie 1
@@ -60,12 +64,26 @@ int main()
 	cin >> n;
 	cout << "silnia z tej liczby to: " << silnia(n) << endl;*/
 
-	int n;
-	cout << "Do jakiej potêgi chcesz podniesc liczbe 2 " << endl;
+	/*int n;													//zadanie 6.1
+	cout << "Do jakiej potegi chcesz podniesc liczbe 2 " << endl;
 	cin >> n;
-	cout << "2 do " << n << " to: " << potegowaniedwojki(n) << endl;
+	cout << "2 do " << n << " to: " << potegowaniedwojki(n) << endl;*/
 
+	/*int n = 0;													//zadanie 6.2
+	cout << "Do jakiej potegi chcesz podniesc liczbe 2 " << endl;
+	cin >> n;
+	cout << "2 do " << n << " to: " << potegowaniedoentej(n) << endl;*/
+	
+	/*int liczba = 0;												//zadanie 7
+	cout << "podaj liczbe od 1 do 10" << endl;
+	cin >> liczba;
+	if (liczba >= 1 && liczba <= 10) {
+		cout << "liczba " << liczba << " pojawila sie " << losowananie(liczba) << " razy, co stanowi " << procent(losowananie(liczba)) << "% wszystkich wylosowanych liczb" << endl;
 
+	}
+	else {
+		cout << "podano liczbe spoza zakresu " << endl;
+	}*/
 
 /*	int n = 0;										//zadanie 8
 	while (n < 100) {
@@ -157,11 +175,32 @@ int potegowaniedwojki(int n) {
 	int wynik = 2;
 	if (n == 0) {
 		return 1;
+	}
 	else {
-		for (int i = 0; i < n; i++) {
+		for (int i = 1; i < n; i++) {
 			wynik = wynik * 2;
 		}
 		return wynik;
 	}
+	
+}
+float potegowaniedoentej(float n) {
+	return pow(2, n);
+}
+
+int losowananie(int n) {
+	int sec = time(NULL);
+	srand(sec);
+	int licznik=0,losowa=0;
+	for (int i = 0; i < 10; i++) {
+		losowa = rand() % 10 + 1;
+		if (losowa == n) {
+			licznik = licznik + 1;
+		}
 	}
+	return licznik;
+}
+int procent(int n) {
+	int procent = n * 10;
+	return procent;
 }
