@@ -11,6 +11,7 @@ float mnozenie(float a, float b);
 float dzielenie(float a, float b);
 int dzielenieparzystej(int n);
 int dzielenienieparzystej(int n);
+int potegowaniedwojki(int n);
 int main()
 {
 	/*int a, b;												//zadanie 1
@@ -60,10 +61,13 @@ int main()
 	cout << "silnia z tej liczby to: " << silnia(n) << endl;*/
 
 	int n;
-	cout
+	cout << "Do jakiej potêgi chcesz podniesc liczbe 2 " << endl;
+	cin >> n;
+	cout << "2 do " << n << " to: " << potegowaniedwojki(n) << endl;
 
 
-/*	int n = 0;
+
+/*	int n = 0;										//zadanie 8
 	while (n < 100) {
 		if (n % 2 == 0) {
 			cout << dzielenieparzystej(n) << endl;
@@ -148,4 +152,16 @@ int dzielenieparzystej(int n) {
 }
 int dzielenienieparzystej(int n) {
 	return (n - 1) / 2;
+}
+int potegowaniedwojki(int n) {
+	int wynik = 2;
+	if (n == 0) {
+		return 1;
+	else {
+		for (int i = 0; i < n; i++) {
+			wynik = wynik * 2;
+		}
+		return wynik;
+	}
+	}
 }
